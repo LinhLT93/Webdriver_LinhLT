@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Selenium TestNG mutibrowser" parallel="false">
+
+
+	<test name="Run on chorme ">
+		<parameter name="browser" value="chrome" />
+		<packeages>
+			<packeages name="selenium" />
+		</packeages>
+
+	</test>
+
+	<test name="Run on firefox ">
+		<parameter name="browser" value="firefox" />
+		<packeages>
+			<packeages name="selenium" />
+		</packeages>
+	</test>
+
+
+</suite>

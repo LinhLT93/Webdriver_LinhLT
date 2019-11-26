@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Selenium TestNG mutibrowser" parallel="false">
+
+
+	<test name="Run on chorme ">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="selenium.Topic01_Demotest_CheckLogin" />
+		</classes>
+	</test>
+
+	<test name="Run on firefox ">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="selenium.Topic01_Demotest_CheckLogin" />
+		</classes>
+	</test>
+
+	
+</suite>
