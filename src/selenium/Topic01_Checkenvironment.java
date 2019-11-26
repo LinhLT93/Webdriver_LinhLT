@@ -2,7 +2,7 @@ package selenium;
 
 import org.testng.annotations.Test;
 
-import junit.framework.Assert;
+
 
 import org.testng.annotations.BeforeClass;
 
@@ -10,7 +10,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class Topic01_Checkenvironment {
@@ -18,7 +20,8 @@ public class Topic01_Checkenvironment {
 
 	@BeforeClass
 	public void beforeClass() {
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", ".\\lib\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("http://demo.guru99.com/v4/");
